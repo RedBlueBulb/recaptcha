@@ -63,4 +63,15 @@ return [
 
     'version'     => 2,
 
+    /*
+    |--------------------------------------------------------------------------
+    | Turnstile
+    |--------------------------------------------------------------------------
+    |
+    | Whether to use Turnstile instead of reCaptcha. Only works when version is set to 2
+    |
+    */
+
+    'turnstile' => false
+
 ];
