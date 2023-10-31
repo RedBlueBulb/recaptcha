@@ -17,7 +17,7 @@ if ( ! function_exists('renderDataAttributes')) {
     </script>
 @endif
 
-@if(config('recaptcha.options.turnstile') === true)
+@if(config('recaptcha.turnstile') === true)
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?compat=recaptcha" async defer></script>
 @else
     <script src='https://www.google.com/recaptcha/api.js?render=onload{{ (isset($lang) ? '&hl='.$lang : '') }}'></script>
@@ -25,7 +25,7 @@ if ( ! function_exists('renderDataAttributes')) {
 
 <div class="g-recaptcha" data-sitekey="{{ $public_key }}" <?=renderDataAttributes($dataParams)?>></div>
 
-@if(config('recaptcha.options.turnstile') !== true)
+@if(config('recaptcha.turnstile') !== true)
     <noscript>
         <div style="width: 302px; height: 352px;">
             <div style="width: 302px; height: 352px; position: relative;">

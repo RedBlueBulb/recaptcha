@@ -24,7 +24,7 @@ class CheckRecaptchaV2 implements RecaptchaInterface
             'response' => $response,
         ]);
 
-        if(app('config')->get('recaptcha.options.turnstile') === true){
+        if(app('config')->get('recaptcha.turnstile') === true){
             $url = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
             $checkResponse = null;
     
